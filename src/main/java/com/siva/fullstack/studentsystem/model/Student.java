@@ -15,12 +15,17 @@ public class Student {
 
     private String address;
 
+    private String branch;
+    private Boolean isWorking;
+
     @Override
     public String toString() {
-        return "StudentService{" +
+        return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
+                ", branch='" + branch + '\'' +
+                ", isWorking=" + isWorking +
                 '}';
     }
 
@@ -46,5 +51,21 @@ public class Student {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
+    public Boolean getWorking() {
+        return isWorking;
+    }
+
+    public void setWorking(Boolean working) {
+        isWorking = working;
     }
 }
