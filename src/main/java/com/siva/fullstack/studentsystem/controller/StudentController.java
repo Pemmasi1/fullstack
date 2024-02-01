@@ -25,9 +25,9 @@ public class StudentController {
     public ResponseEntity add(@RequestBody StudentDto student) {
         if (!student.getName().isEmpty() || !student.getAddress().isEmpty()) {
             String res = studentService.saveStudent(student);
-            if(res.equals("student is added")){
+            if("student is added".equals(res)){
                 return new ResponseEntity<>("student is added", HttpStatus.NO_CONTENT);
-            } else if (res.equals("same student is already present")) {
+            } else if ("same student is already present".equals(res)) {
                 return new ResponseEntity<>(res, HttpStatus.BAD_REQUEST);
             }
         }

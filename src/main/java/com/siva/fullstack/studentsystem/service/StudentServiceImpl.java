@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService {
         student.setAddress(stu.getAddress());
         student.setName(stu.getName());
         student.setBranch(stu.getBranch());
-        student.setWorking(stu.getIsWorking().equals("Yes") ? true : false);
+        student.setWorking("Yes".equals(stu.getIsWorking()) ? true : false);
 
         studentRepo.save(student);
         return "student is added";
